@@ -1,8 +1,15 @@
 @keyframes move {
   0% {
-    background-position: 0%; }
+    background-position: 0px; }
   100% {
-    background-position: 50%; } }
+    background-position: 20px; } }
+@keyframes bk {
+  0% {
+    background: rgba(0, 0, 0, 0.8); }
+  25% {
+    background: rgba(0, 0, 0, 0.2); }
+  100% {
+    background: rgba(0, 0, 0, 0.8); } }
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +26,33 @@
   background-image: url("https://images.pexels.com/photos/726478/pexels-photo-726478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-repeat: no-repeat;
   background-size: cover;
-  animation: move 5s;
-  animation-iteration-count: 5; }
+  transition: 2s;
+  animation: move 60s;
+  animation-iteration-count: infinite; }
+
+#blackCurtain {
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  animation: bk 60s;
+  animation-iteration-count: infinite; }
+
+#info {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center; }
+  #info #navbar {
+    align-items: flex-end;
+    align-content: flex-end;
+    display: flex;
+    width: 55vw;
+    height: 85vh;
+    justify-content: space-around; }
+    #info #navbar * {
+      color: white; }
 
 /*# sourceMappingURL=main.css.map */
