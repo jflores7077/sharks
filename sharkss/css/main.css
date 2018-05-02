@@ -1,0 +1,25 @@
+@keyframes move {
+  0% {
+    background-position: 0%; }
+  100% {
+    background-position: 50%; } }
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+
+#head {
+  width: 100vw;
+  height: 100vh;
+  background: black; }
+
+#splash {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/726478/pexels-photo-726478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: move 5s;
+  animation-iteration-count: 5; }
+
+/*# sourceMappingURL=main.css.map */
