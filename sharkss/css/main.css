@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
 @keyframes move {
   0% {
     background-position: 0px; }
@@ -13,7 +14,8 @@
 * {
   margin: 0;
   padding: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  font-family: 'Open Sans Condensed', sans-serif; }
 
 #head {
   width: 100vw;
@@ -62,21 +64,9 @@
       justify-content: center;
       width: 100%;
       transition: 0.5s;
-      font-size: 1.05em; }
-    #info #navbar .item p::before {
-      content: ' ';
-      z-index: 0;
-      position: absolute;
-      top: 80vh;
-      width: 2%;
-      display: flex;
-      justify-content: center;
-      border-bottom: 1px solid white;
-      transition: 0.5s;
-      padding: 0 0 1.15em 0em; }
-    #info #navbar .item p:hover::before {
-      text-decoration: underline;
-      border-bottom: 1px solid white;
-      width: 10%; }
+      font-size: 1.205em;
+      letter-spacing: 3px; }
+    #info #navbar .item p:hover {
+      text-decoration: underline; }
 
 /*# sourceMappingURL=main.css.map */
