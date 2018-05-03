@@ -1,28 +1,5 @@
+@import "fn";
 
-@keyframes move{
-    0%{
-        background-position: 0px;
-    }
-
-    100%{
-        background-position: 20px;
-    }
-}
-
-
-@keyframes bk{
-    0%{
-        background: rgba(0,0,0,0.8);
-    }
-    25%{
-        background: rgba(0,0,0,0.2);
-    }
-
-    100%{
-        background: rgba(0,0,0,0.8);
-    }
-}
-$bgTime: 60s;
 *{
     margin:0;
     padding: 0;
@@ -53,6 +30,8 @@ $bgTime: 60s;
     width: 100vw;
     height: 100vh;
 
+    pointer-events: none;
+
     animation: bk $bgTime;
     animation-iteration-count: infinite;
 }
@@ -62,6 +41,7 @@ $bgTime: 60s;
     height: 100vh;
     display: flex;
     justify-content: center;
+    z-index: 0;
     #navbar{
         align-items: flex-end;
         align-content: flex-end;
@@ -69,9 +49,35 @@ $bgTime: 60s;
         width: 55vw;
         height: 85vh;
         justify-content: space-around;
-
-            *{
+        
+            .item {
                 color: white;
+                padding: 0px 15px;
+            }
+            .item p{
+                
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                transition: 0.5s;
+                font-size: 1.05em;
+            }
+            .item p::before{
+                content: ' ';
+                z-index: 0;
+                position: absolute;
+                top: 80vh ;
+                width: 2%;
+                display: flex;
+                justify-content: center;
+                border-bottom: 1px solid white;
+                transition: 0.5s;
+                padding: 0 0 1.15em 0em;
+            }
+            .item p:hover::before{
+                text-decoration: underline;
+                border-bottom: 1px solid white;
+                width: 10%;
             }
     }      
 }

@@ -37,6 +37,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  pointer-events: none;
   animation: bk 60s;
   animation-iteration-count: infinite; }
 
@@ -44,7 +45,8 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 0; }
   #info #navbar {
     align-items: flex-end;
     align-content: flex-end;
@@ -52,7 +54,29 @@
     width: 55vw;
     height: 85vh;
     justify-content: space-around; }
-    #info #navbar * {
-      color: white; }
+    #info #navbar .item {
+      color: white;
+      padding: 0px 15px; }
+    #info #navbar .item p {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      transition: 0.5s;
+      font-size: 1.05em; }
+    #info #navbar .item p::before {
+      content: ' ';
+      z-index: 0;
+      position: absolute;
+      top: 80vh;
+      width: 2%;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid white;
+      transition: 0.5s;
+      padding: 0 0 1.15em 0em; }
+    #info #navbar .item p:hover::before {
+      text-decoration: underline;
+      border-bottom: 1px solid white;
+      width: 10%; }
 
 /*# sourceMappingURL=main.css.map */

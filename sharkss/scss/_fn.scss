@@ -1,0 +1,24 @@
+@keyframes move{
+    0%{
+        background-position: 0px;
+    }
+
+    100%{
+        background-position: 20px;
+    }
+}
+
+
+@keyframes bk{
+    0%{
+        background: rgba(0,0,0,0.8);
+    }
+    25%{
+        background: rgba(0,0,0,0.2);
+    }
+
+    100%{
+        background: rgba(0,0,0,0.8);
+    }
+}
+$bgTime: 60s;
