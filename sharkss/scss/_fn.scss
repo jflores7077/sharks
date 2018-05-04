@@ -1,25 +1,32 @@
 @keyframes move{
+
     0%{
         background-position: 0px;
     }
+    25%{
+        background-position: 5px;
+    }
 
     100%{
-        background-position: 20px;
+       background-position: 20px;
     }
 }
 
 
 @keyframes bk{
     0%{
-        background: rgba(0,0,0,0.8);
+        background: rgba(0,0,0,1);
     }
     25%{
         background: rgba(0,0,0,0.2);
     }
 
-    100%{
+    80%{
         background: rgba(0,0,0,0.8);
+    }
+    90%{
+        background: rgba(0,0,0,1);
     }
 }
 
-$bgTime: 60s;
+$bgTime: 12s;

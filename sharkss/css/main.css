@@ -2,15 +2,19 @@
 @keyframes move {
   0% {
     background-position: 0px; }
+  25% {
+    background-position: 5px; }
   100% {
     background-position: 20px; } }
 @keyframes bk {
   0% {
-    background: rgba(0, 0, 0, 0.8); }
+    background: black; }
   25% {
     background: rgba(0, 0, 0, 0.2); }
-  100% {
-    background: rgba(0, 0, 0, 0.8); } }
+  80% {
+    background: rgba(0, 0, 0, 0.8); }
+  90% {
+    background: black; } }
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +33,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   transition: 2s;
-  animation: move 60s;
+  animation: move 12s;
   animation-iteration-count: infinite; }
 
 #blackCurtain {
@@ -40,7 +44,7 @@
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  animation: bk 60s;
+  animation: bk 12s;
   animation-iteration-count: infinite; }
 
 #info {
