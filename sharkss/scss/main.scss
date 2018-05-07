@@ -14,8 +14,6 @@
     background: black;
 }
 #splash{
-    width: 100vw;
-    height: 100vh;
     background-image: url("https://images.pexels.com/photos/726478/pexels-photo-726478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-repeat: no-repeat;
     background-size: cover;
@@ -40,8 +38,6 @@
 }
 
 #info{
-    width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     z-index: 0;
