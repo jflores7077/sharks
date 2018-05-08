@@ -65,21 +65,21 @@
         height: 85vh;
         justify-content: space-around;
         
-            .item {
+            .item a{
                 color: white;
                 padding: 0px 15px;
             }
-            .item p{
+            .item a{
                 
                 display: flex;
                 justify-content: center;
                 width: 100%;
                 transition: 0.5s;
-                font-size: 1.205em;
+                font-size: 1.45em;
                 letter-spacing: 3px;
             }
 
-            .item p:hover{
+            .item a:hover{
                 
                 text-decoration: underline;
             }

@@ -74,17 +74,17 @@
     width: 55vw;
     height: 85vh;
     justify-content: space-around; }
-    #info #navbar .item {
+    #info #navbar .item a {
       color: white;
       padding: 0px 15px; }
-    #info #navbar .item p {
+    #info #navbar .item a {
       display: flex;
       justify-content: center;
       width: 100%;
       transition: 0.5s;
-      font-size: 1.205em;
+      font-size: 1.45em;
       letter-spacing: 3px; }
-    #info #navbar .item p:hover {
+    #info #navbar .item a:hover {
       text-decoration: underline; }
 
 /*# sourceMappingURL=main.css.map */
