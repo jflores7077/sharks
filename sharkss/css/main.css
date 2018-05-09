@@ -1,19 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
 @keyframes move {
   0% {
-    background-position: 0px; }
+    background-position: 1%; }
   25% {
-    background-position: 5px; }
+    background-position: 5%; }
   100% {
-    background-position: 20px; } }
+    background-position: 25%; } }
 @keyframes bk {
   0% {
     background: black; }
+  5% {
+    background: rgba(0, 0, 0, 0.6); }
   25% {
     background: rgba(0, 0, 0, 0.2); }
   80% {
     background: rgba(0, 0, 0, 0.8); }
-  90% {
+  98% {
+    background: rgba(0, 0, 0, 0.6); }
+  100% {
+    background: black; } }
+@keyframes bkChange {
+  100% {
     background: black; } }
 * {
   margin: 0;
@@ -30,8 +37,7 @@
   background-image: url("https://images.pexels.com/photos/726478/pexels-photo-726478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-repeat: no-repeat;
   background-size: cover;
-  transition: 2s;
-  animation: move 12s;
+  animation: move 20s;
   animation-iteration-count: infinite; }
 
 #blackCurtain {
@@ -42,8 +48,16 @@
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  animation: bk 12s;
+  transition: 1s; }
+
+.fadeBlack {
+  animation: bk 20s;
   animation-iteration-count: infinite; }
+
+.changePage {
+  animation: bkChange 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; }
 
 #info {
   display: flex;

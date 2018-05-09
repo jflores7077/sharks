@@ -18,9 +18,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    transition: 2s;
     animation: move $bgTime;
     animation-iteration-count: infinite;
+
 }
 
 #blackCurtain{
@@ -33,9 +33,21 @@
 
     pointer-events: none;
 
+    transition: 1s;
+
+}
+
+.fadeBlack{
     animation: bk $bgTime;
     animation-iteration-count: infinite;
 }
+
+.changePage{
+    animation: bkChange 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+}
+
 
 #info{
     display: flex;
