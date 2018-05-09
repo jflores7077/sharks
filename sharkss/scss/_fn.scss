@@ -37,11 +37,17 @@
 
 @keyframes bkChange{
     0%{
+       
         
     }
-    
-    100%{
+    50%{
         background: rgba(0,0,0,1);
+    }
+    60%{
+        background: rgba(0,0,0,1);
+    }
+    100%{
+        background: rgba(0,0,0,0);
     }
 }
 $bgTime: 20s;

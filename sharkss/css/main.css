@@ -20,8 +20,12 @@
   100% {
     background: black; } }
 @keyframes bkChange {
+  50% {
+    background: black; }
+  60% {
+    background: black; }
   100% {
-    background: black; } }
+    background: rgba(0, 0, 0, 0); } }
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +35,8 @@
 #head {
   width: 100vw;
   height: 100vh;
-  background: black; }
+  background: black;
+  position: relative; }
 
 #splash {
   background-image: url("https://images.pexels.com/photos/726478/pexels-photo-726478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
@@ -48,14 +53,18 @@
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  transition: 1s; }
+  transition: 1s;
+  z-index: 2; }
 
 .fadeBlack {
   animation: bk 20s;
   animation-iteration-count: infinite; }
 
+.fadeWhite {
+  opacity: 0; }
+
 .changePage {
-  animation: bkChange 0.5s;
+  animation: bkChange 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards; }
 
@@ -82,5 +91,11 @@
       letter-spacing: 3px; }
     #info #navbar .item a:hover {
       text-decoration: underline; }
+
+#body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: rgba(20, 10, 0, 0.9); }
 
 /*# sourceMappingURL=main.css.map */

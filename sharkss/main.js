@@ -34,11 +34,26 @@ function changePage(){
     $('.item').click(function(){
         $("#blackCurtain").toggleClass('fadeBlack');
         $('#blackCurtain').toggleClass("changePage");
+        
     });
 };
+
+//Animation
+function clickedBtn(a){
+    //$('#head').css('top','-500vh')
+    $('#body').css('top','-100vh')
+    $('#head').css('opacity','0')
+};
+
+
 /**functions */
 
 $(document).ready(function(){
     loaded();
     changePage();
+    
+    $('.btnSplash').click(function(a){
+        clickedBtn(this);
+
+    });
 });
