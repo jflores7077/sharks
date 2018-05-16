@@ -110,18 +110,43 @@
         h1{
             font-weight: 700;
             letter-spacing: 10px;
+            text-decoration: underline;
         }
     }
     #origin{
         display: flex;
         width: 100%;
         height: 35%;
+        flex-direction: column;
+        padding: 1vh 2vw;
+        #subTitle{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+        }
+        #OBody{
+
+            p{
+                font-size: 1.25em;
+            }
+        }
+        #o_img{
+            width:100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+        
+        }
     }
     #factsList{
-        width: 100%;
-        height: 85%;
-        align-items: center;
         display: flex;
+        width: 100%;
+        height: 35%;
+        flex-direction: column;
+        padding: 1vh 2vw;
 
         ul{
             align-self: flex-start;
