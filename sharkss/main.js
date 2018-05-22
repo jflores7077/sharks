@@ -1,6 +1,5 @@
 /*
 Shark Team
-XF
 5/3/18
 */
 
@@ -56,4 +55,15 @@ $(document).ready(function(){
         clickedBtn(this);
 
     });
+
+    $("a.navitem[href]").click(function(e){
+        e.preventDefault();
+        if (this.href) {
+            var target = this.href;
+            setTimeout(function(){
+                window.location = target;
+            }, 500);
+        }
+    });
+
 });
