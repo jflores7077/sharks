@@ -21,7 +21,7 @@ function bgImageChange(){
         $('#splash').css({
             'backgroundImage':'url("'+bkImg[randomInt(0,bkImg.length)]+'")',
         })
-     }, 200);
+     }, 20000);
 };
 
 function loaded(){
