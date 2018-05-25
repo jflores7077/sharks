@@ -18,7 +18,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     
-    animation: move $bgTime;
+    animation: move $bgTime * 0.9;
+    animation-timing-function: ease-out;
     animation-iteration-count: infinite;
 
 }

@@ -1,14 +1,14 @@
 @keyframes move{
 
     0%{
-        background-position: 1%;
+        background-position: 0px 0px;
     }
     25%{
-        background-position: 5%;
+        background-position: 50% 35%;
     }
 
     100%{
-       background-position: 25%;
+       background-position: 25% 50%;
     }
 }
 

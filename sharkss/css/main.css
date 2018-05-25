@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
 @keyframes move {
   0% {
-    background-position: 1%; }
+    background-position: 0px 0px; }
   25% {
-    background-position: 5%; }
+    background-position: 50% 35%; }
   100% {
-    background-position: 25%; } }
+    background-position: 25% 50%; } }
 @keyframes bk {
   0% {
     background: black; }
@@ -37,7 +37,8 @@
   background-image: url("https://images.pexels.com/photos/726478/pexels-photo-726478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-repeat: no-repeat;
   background-size: cover;
-  animation: move 20s;
+  animation: move 18s;
+  animation-timing-function: ease-out;
   animation-iteration-count: infinite; }
 
 #blackCurtain {
