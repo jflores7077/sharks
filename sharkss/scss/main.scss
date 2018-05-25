@@ -4,7 +4,6 @@
 *{
     margin:0;
     padding: 0;
-    overflow: hidden;
     font-family: 'Open Sans Condensed', sans-serif;
     
 }
@@ -18,7 +17,7 @@
     background-image: url("https://images.pexels.com/photos/726478/pexels-photo-726478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-repeat: no-repeat;
     background-size: cover;
-
+    
     animation: move $bgTime;
     animation-iteration-count: infinite;
 
@@ -64,6 +63,7 @@
         display: flex;
         width: 55vw;
         height: 85vh;
+        margin-bottom: 15vh;
         justify-content: space-around;
         
             .item a{
