@@ -1,0 +1,72 @@
+/*@import url('https://fonts.googleapis.com/css?family=Ubuntu');*/
+@keyframes open {
+  0% {
+    height: 100vh;
+    background-position-y: 5%; }
+  100% {
+    height: 80vh;
+    background-position-y: 15%; } }
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu'; }
+
+body {
+  background: #89C4F4; }
+
+#SharkBK {
+  background-image: url("https://images2.alphacoders.com/813/81302.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position-y: 0%;
+  background-repeat: no-repeat;
+  background-size: full;
+  width: 100%;
+  height: 100vh;
+  animation: open 0.5s;
+  animation-fill-mode: forwards; }
+
+.STnav {
+  background: #22313F;
+  display: flex;
+  height: 8vh;
+  width: 100%;
+  justify-content: space-around;
+  border-bottom: 2px solid rgba(10, 2, 10, 0.5); }
+  .STnav li {
+    display: flex;
+    padding: 5px 10px;
+    flex: 1;
+    justify-content: center;
+    transition: 0.25s;
+    align-items: center; }
+  .STnav li * {
+    font-size: 1.25em;
+    color: #f0f0eb; }
+  .STnav li.allow:hover {
+    background: #2C3E50;
+    transition: 0.5s; }
+
+#IsolateBar {
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-style: italic;
+  font-size: 0.9em;
+  text-decoration: underline;
+  background: #34495E;
+  border-bottom: 1px solid rgba(10, 2, 10, 0.5);
+  border-top: 1px solid rgba(10, 2, 10, 0.5);
+  letter-spacing: 1.75px; }
+
+body {
+  height: 200vh; }
+  body #info {
+    height: 10vh;
+    margin: 2vh 2vw;
+    padding: 0vh 2vw;
+    background: rgba(255, 255, 255, 0.1); }
+
+/*# sourceMappingURL=main.css.map */
