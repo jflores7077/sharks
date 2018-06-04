@@ -10,3 +10,14 @@
         background-position-y: 15%;
     }
 }
+
+@keyframes openNotHome{
+    0%{
+        height: 100vh;
+        background-position-y: 5%;
+    }
+    100%{
+        height: 20vh;
+        background-position-y: 65%;
+    }
+}

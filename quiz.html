@@ -1,21 +1,91 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <title>Sharks || Home</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+            <!-- Latest compiled and minified CSS -->
+            <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.mn.css"> -->
+            <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <!-- Latest compiled JavaScript -->
+            <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    
+            
+            <link rel="stylesheet" type="text/css" href="css/main.css">
+            
+            <script src='main.js'></script>
+            <script>
+            
+            function loaded(){
+                //https://sharkquiz-858c8.firebaseio.com/
+                var pushTo = document.getElementById('quiz');
+                var indexOfColumn = 0;
+                var LColumn = 1;
+                $.getJSON('https://sharkquiz-858c8.firebaseio.com/.json',function(a){
+                    
+                    for(var i in a){
+                        indexOfColumn++;
+                        console.log(indexOfColumn%4==3)
+                        if(indexOfColumn%3==2){
+                            LColumn++;
+                            var row = document.createElement('div');
+                            row.className = 'row';
+                            row.id = LColumn;
+                            pushTo.appendChild(row);
+                        }
 
-        
-        <link rel="stylesheet" type="text/css" href="css/main.css">
+                        for(var j in a[i]){
+                            var pushToRow = document.getElementById(LColumn);
+                            var answerChoice = false;
+                            var answer = false;
+                            var question = false;
+                            if(j == 'a' || j=='b'||j=='c'||j=='d'){
+                                answerChoice = true;
+                            }
+                            console.log(j)
+                            if(answerChoice){
+                                var card = document.createElement('div');
+                                card.className='cardQuiz';
+                                card.innerText = j;
+                                pushToRow.appendChild(card);
 
-        <script src='main.js'></script>
-    </head>
+                            }
+                        }
+                    }
 
-    <body>
-         
+                    
+                })
+            };
+            </script>
+        </head>
+
+    <body onload='loaded()'>
+        <div id='head' class='jumbotron'>
+            <div id='SharkBK' class='jumbotron NotHome'>
+            </div>
+            <div id='IsolateBar'> 
+                <p>Sharks</p>
+            </div>
+            <ul id='STNavBar' class='STnav'>
+                <li></li>
+                <li class='allow'><a href='./index.html' class='STitem'><p>Home</p></a></li>
+                <li></li>
+                <li class='allow NavSelected'><a class='STitem' href='./quiz.html'><p>Quiz</p></a></li>
+                <li></li>
+                <li class='allow dropDown'><a class='STitem'><p>About</p></a></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div id='body'>
+            <center>
+            <div id='quiz'>
+                <div class='row' id='1'>
+                    
+                </div>  
+            </div>
+            </center>
+        </div>
     </body>
 </html>
