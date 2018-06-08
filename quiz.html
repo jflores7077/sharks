@@ -13,78 +13,138 @@
     
             
             <link rel="stylesheet" type="text/css" href="css/main.css">
-            
+            <script src='functions.js'></script>
             <script src='main.js'></script>
             <script>
             
+            var index = 0;
+            var curRow = 0;
+            var correctAnswers = [];
+            
             function loaded(){
-                //https://sharkquiz-858c8.firebaseio.com/
-                var pushTo = document.getElementById('quiz');
-                var indexOfColumn = 0;
-                var LColumn = 1;
+
                 $.getJSON('https://sharkquiz-858c8.firebaseio.com/.json',function(a){
+                    LoadQuiz(a)
+                })
+                
+                //Due to dynamiclly added elements, we have to use .on and specify child*/
+                
+                //check for clicks on button
+                $('#quiz').on('click', '#checkQuiz', function(){
+                    //get all cards
+                    var parents = $('.cardQuiz');
+
+                    //score
+                    var score = 0;
+
+                    //total questions
+                    var total = $(parents).children('.quizQuestion').length;
+
+                    if($(parents).has('.selected').length==0) { 
+                        $('#infoQuiz').text('Answer Some Questions!');
+                    }else{
+                        $.each($('.cardQuiz .selected'), function(i, v){
+                            var answer = $(v).parent().parent().attr('id')
+                            var userAnswer = $(v).text();
+                            userAnswer = userAnswer.replace(/\s/g, '_');
+                            if(answer == userAnswer){
+                                score++;
+                            }
+                            console.log(answer+':'+userAnswer)
+
+                            $('#infoQuiz').text('You scored '+score+' out of '+total);
+                            
+                        });
+
+                    }
                     
-                    for(var i in a){
-                        indexOfColumn++;
-                        console.log(indexOfColumn%4==3)
-                        if(indexOfColumn%3==2){
-                            LColumn++;
-                            var row = document.createElement('div');
-                            row.className = 'row';
-                            row.id = LColumn;
-                            pushTo.appendChild(row);
-                        }
+                    
+                });
 
-                        for(var j in a[i]){
-                            var pushToRow = document.getElementById(LColumn);
-                            var answerChoice = false;
-                            var answer = false;
-                            var question = false;
-                            if(j == 'a' || j=='b'||j=='c'||j=='d'){
-                                answerChoice = true;
-                            }
-                            console.log(j)
-                            if(answerChoice){
-                                var card = document.createElement('div');
-                                card.className='cardQuiz';
-                                card.innerText = j;
-                                pushToRow.appendChild(card);
+                //check for clicks on choices
+                $('#quiz').on('click', '.choiceQuiz ', function() {
+                    //Get parent of div clicked on
+                    var parent = $(this).parent();
 
-                            }
-                        }
+                    //find if any children have class of selected
+                    var is = $(parent).find('.selected');
+
+                    //If it does
+                    if(is.length){
+                        //toggle the class for it
+                        $.each(is,function(i, value){
+                            $(value).toggleClass('selected');
+                        })
+
+                        //toggle the class for clicked on div
+                        $(this).toggleClass('selected');
+
+                    //otherwise
+                    }else{
+                        //toggle class for the clicked on div
+                        $(this).toggleClass('selected');
                     }
 
-                    
-                })
+                });
+                
             };
             </script>
         </head>
 
     <body onload='loaded()'>
-        <div id='head' class='jumbotron'>
-            <div id='SharkBK' class='jumbotron NotHome'>
+            <div id='head' class='jumbotron'>
+                <div id='IsolateBar'> 
+                    <p>Sharks</p>
+                </div>
+                <div id='SharkBK' class='jumbotron NotHome'>
+                </div>
+                
+                <ul id='STNavBar' class='STnav'>
+                    <li></li>
+                    <li class='allow '>
+                        <a href='./index.html' class='STitem'>
+                            <p>Home</p>
+                        </a>
+                        
+                        
+                    </li>
+                    <li class='allow NavSelected'><a class='STitem'><p>Quiz</p></a></li>
+
+                    <li class='allow '><a class='STitem'><p>About</p></a></li>
+                    <li class='allow dropdown'><a class='STitem'>
+                        <p>Info</p></a>
+                        <div class="dropdown-content">
+                            <center><a href='./behave.html'>Behaviour</a></center>
+                            <center><a href="./facts.html">Facts</a></center>
+                            <center><a href="./sharks.html">Info</a></center>
+                        </div>
+                    
+                    </li>
+                    <li></li>
+                </ul>
+    
             </div>
-            <div id='IsolateBar'> 
-                <p>Sharks</p>
-            </div>
-            <ul id='STNavBar' class='STnav'>
-                <li></li>
-                <li class='allow'><a href='./index.html' class='STitem'><p>Home</p></a></li>
-                <li></li>
-                <li class='allow NavSelected'><a class='STitem' href='./quiz.html'><p>Quiz</p></a></li>
-                <li></li>
-                <li class='allow dropDown'><a class='STitem'><p>About</p></a></li>
-                <li></li>
-            </ul>
-        </div>
 
         <div id='body'>
             <center>
+                <h1>
+                    Quiz
+                </h1>
+            </center>
+            <center>
             <div id='quiz'>
-                <div class='row' id='1'>
-                    
-                </div>  
+
+
             </div>
+            </center>
+        </div>
+        <div id='foot'>
+
+            <center>
+                <h3>Made by</h3>
+                <p>Javier</p>
+                <p> Matthew</p>
+                <p>Holly</p>
             </center>
         </div>
     </body>

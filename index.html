@@ -13,35 +13,92 @@
 
         
         <link rel="stylesheet" type="text/css" href="css/main.css">
-        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-        
+        <script src='functions.js'></script>
         <script src='main.js'></script>
+      
     </head>
 
     <body>
         <div id='head' class='jumbotron'>
-            <div id='SharkBK' class='jumbotron Home'>
-            </div>
             <div id='IsolateBar'> 
                 <p>Sharks</p>
             </div>
+            <div id='SharkBK' class='jumbotron Home'>
+            </div>
+           
             <ul id='STNavBar' class='STnav'>
                 <li></li>
-                <li class='allow NavSelected'><a href='#body' class='STitem'><p>Home</p></a></li>
-                <li></li>
+                <li class='allow NavSelected'>
+                    <a href='' class='STitem'>
+                        <p>Home</p>
+                    </a>
+                </li>
+                
+                
                 <li class='allow'><a class='STitem' href='./quiz.html'><p>Quiz</p></a></li>
-                <li></li>
-                <li class='allow dropDown'><a class='STitem'><p>About</p></a></li>
+                <li class='allow'><a class='STitem'><p>About</p></a></li>
+                <li class='allow dropdown'><a class='STitem'>
+                    <p>Info</p></a>
+                    <div class="dropdown-content">
+                        <center><a href='./behave.html'>Behaviour</a></center>
+                        <center><a href="./facts.html">Facts</a></center>
+                        <center><a href="./sharks.html">Info</a></center>
+                    </div>
+                
+                </li>
                 <li></li>
             </ul>
+
         </div>
         <div id='body'>
+            <center>
+            <h3>About the website</h3>
+            <div id='introBody'>
+                <p>Our topic is information about sharks. Our website will help people learn what all sharks have in common but also help people identify different sharks by their unique appearances. It will also explain how some sharks adapted to their environment  over millions of years. The main goal of our website is to give you a better understanding of sharks and to learn something you didn't know prior to visiting the website.</p>
+
+            </div>
+            </center>
             <div id='info'>
-                <p>Sharks are really big creatures with big fins and a bunch of other things that can swim and eat other small fishes these sharks tend to not to much but other than to walk around and swim and eat other fishes and they can eat more fish that the ordinary cat can</p>
+                <div id='infoTwo'>
+                    <div class='infoIndex cardInfo' id='behaviour'>
+                        <h1>behaviour</h1>
+                        <p>Sharks combine physical adaptations such as sharp teeth, heightened senses and a forceful body and tail with behavioral techniques to catch prey. Sharks are nocturnal predators of the ocean, feeding at night between low and high tide, and typically in shallow water near...</p>
+                    
+                        <a href='.\behave.html'><p>Read More...</p></a>
+                    </div>
+                    
+                    <div class='infoIndex cardInfo' id='type'>
+                        <h1>Species</h1>
+                        <p>There are over 400 types of sharks! Read about some of them here:</p>
+                        <a href='.\sharks.html'><p>Read More...</p></a>
+                    </div>
+                </div>
+                <center>
+                <div class='infoIndex cardInfo' id='facts'>
+                    <h1>Fun Facts</h1>
+                    <p>Learn some interesting facts about sharks.</p>
+                    <a href='.\facts.html'><p>Read More...</p></a>
+
+                </div>
+                </center>
+
+                <center>
+                <div class='infoIndex' id='quizIndex'>
+                    <h1>Test your knowlegde</h1>
+                    <p> by taking this quiz </p>
+                    <a href='.\quiz.html'><p>Take it!</p></a>
+                </div>
+            </center>
             </div>
         </div>
         <div id='foot'>
-            
+
+            <center>
+                <h3>Made by</h3>
+                <p>Javier</p>
+                <p> Matthew</p>
+                <p>Holly</p>
+            </center>
         </div>
     </body>
 </html>

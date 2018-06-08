@@ -1,14 +1,15 @@
-/*@import url('https://fonts.googleapis.com/css?family=Ubuntu');*/
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300");
 @keyframes open {
   0% {
-    height: 100vh;
-    background-position-y: 5%; }
+    height: 80vh;
+    background-position-y: -20%; }
   100% {
     height: 80vh;
-    background-position-y: 15%; } }
+    background-position-y: 5%; } }
 @keyframes openNotHome {
   0% {
-    height: 100vh;
+    height: 20vh;
     background-position-y: 5%; }
   100% {
     height: 20vh;
@@ -18,25 +19,25 @@
   margin: 0;
   font-family: 'Ubuntu'; }
 
-body {
-  background: #89C4F4; }
+#head * {
+  font-family: 'Montserrat', sans-serif; }
 
 #SharkBK {
   background-image: url("https://images2.alphacoders.com/813/81302.jpg");
-  height: 100%;
   background-attachment: fixed;
   background-position-y: 0%;
   background-repeat: no-repeat;
   background-size: full;
-  width: 100%;
-  height: 100vh; }
+  width: 100%; }
 
 .NotHome {
-  animation: openNotHome 0.5s;
+  height: 20vh;
+  animation: openNotHome 2s;
   animation-fill-mode: forwards; }
 
 .Home {
-  animation: open 0.5s;
+  height: 80vh;
+  animation: open 2s;
   animation-fill-mode: forwards; }
 
 #quiz {
@@ -48,67 +49,187 @@ body {
   box-sizing: border-box;
   flex-flow: column;
   padding: 1vh 1vw; }
+  #quiz * {
+    transition: 2.2s; }
+  #quiz .selected {
+    background: rgba(15, 5, 110, 0.3);
+    font-size: 1.2em;
+    transition: 0.2s; }
+    #quiz .selected * {
+      transition: 0.2s; }
+  #quiz .quizQuestion {
+    background: rgba(10, 2, 10, 0.2);
+    padding: 2.5% 0px;
+    font-size: 1.15em; }
+  #quiz .quizOptions {
+    width: 100%;
+    height: 98%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    cursor: pointer; }
+    #quiz .quizOptions div {
+      flex: 1 0 48%;
+      /* explanation below */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      text-align: center;
+      padding: 10% 0%; }
+    #quiz .quizOptions div:not(.selected):hover {
+      background: rgba(58, 83, 155, 0.25);
+      transition: 0.2s; }
   #quiz .row {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
-    flex-flow: row; }
-    #quiz .row div {
-      margin: 1vh 1vw; }
+    justify-content: space-around;
+    flex-flow: row;
+    align-items: flex-start; }
   #quiz .cardQuiz {
+    margin: 5vh 0vw;
     width: 30%;
-    height: 45vh;
-    background: rgba(30, 10, 131, 0.1);
+    height: 100%;
+    background: rgba(30, 139, 195, 0.4);
     border: dotted 1px rgba(10, 2, 10, 0.2); }
 
 #body center {
   padding: 5vh 0px; }
 
 .STnav {
-  background: #22313F;
   display: flex;
-  height: 8vh;
-  width: 100%;
-  justify-content: space-around;
-  border-bottom: 2px solid rgba(10, 2, 10, 0.5); }
+  background: #59abe3;
+  border-bottom: 2px solid rgba(10, 2, 10, 0.2);
+  position: relative;
+  top: 0; }
+  .STnav * {
+    transition: 0.2s; }
+  .STnav .dropdown {
+    position: relative; }
+  .STnav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: calc( 8vh + 7px );
+    left: 0;
+    width: 100%; }
+    .STnav .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block; }
+    .STnav .dropdown-content a:hover {
+      background-color: #f1f1f1; }
+  .STnav .dropdown:hover .dropdown-content {
+    display: block; }
+    .STnav .dropdown:hover .dropdown-content * {
+      color: black; }
   .STnav li {
+    list-style: none;
+    display: flex;
+    flex: 1; }
+  .STnav li a {
+    height: 8vh;
     display: flex;
     padding: 5px 10px;
     flex: 1;
     justify-content: center;
     transition: 0.25s;
-    align-items: center; }
+    align-items: center;
+    cursor: pointer; }
   .STnav li * {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
     font-size: 1.25em;
-    color: #f0f0eb; }
+    color: rgba(240, 240, 235, 0.6); }
   .STnav li.allow:hover {
     background: #2C3E50;
-    transition: 0.5s; }
+    transition: 0.15s; }
+    .STnav li.allow:hover * {
+      transition: 0.15s;
+      color: rgba(250, 240, 245, 0.9); }
 
 .NavSelected {
-  background: rgba(10, 2, 10, 0.5); }
+  background: rgba(10, 2, 10, 0.1);
+  color: rgba(250, 255, 245, 0.85); }
 
 #IsolateBar {
   height: 12vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: rgba(245, 250, 240, 0.8);
   font-style: italic;
   font-size: 0.9em;
   text-decoration: underline;
-  background: #34495E;
+  background: rgba(51, 110, 123, 0.3);
   border-bottom: 1px solid rgba(10, 2, 10, 0.5);
   border-top: 1px solid rgba(10, 2, 10, 0.5);
   letter-spacing: 1.75px; }
 
+#navbarPlace {
+  height: 8vh;
+  width: 100%; }
+
+.hideBar {
+  display: none; }
+
+.showBar {
+  display: block; }
+
 body {
-  height: 200vh; }
+  background: #89C4F4;
+  height: 100%; }
+  body #list {
+    list-style: square; }
+  body #introBody {
+    display: flex;
+    width: 75%;
+    justify-content: center; }
   body #info {
-    height: 10vh;
-    margin: 2vh 2vw;
-    padding: 0vh 2vw;
-    background: rgba(255, 255, 255, 0.1); }
+    height: 100%;
+    margin: 2vh 2vw; }
+    body #info .cardInfo:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      transition: 0.2s; }
+    body #info .cardInfo {
+      text-align: center;
+      transition: 1s;
+      margin: 5vh 0vw;
+      padding: 2vh 2vw;
+      background: rgba(245, 250, 245, 0.1);
+      width: 40%; }
+      body #info .cardInfo h1 {
+        padding: 2vh 0vw; }
+      body #info .cardInfo p {
+        padding: 1vh 2vw; }
+    body #info #infoTwo {
+      display: flex;
+      width: 100%;
+      justify-content: space-between; }
+
+#foot {
+  height: 50vh;
+  background: #22313f;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(240, 222, 220, 0.836); }
+  #foot h3 {
+    padding: 5vh 2vw; }
+  #foot p {
+    margin: 0.5vh 0vw; }
+
+#b_Body {
+  width: 90%; }
+  #b_Body p {
+    padding: 3vh 0vw; }
 
 /*# sourceMappingURL=main.css.map */
