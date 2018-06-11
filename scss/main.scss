@@ -104,6 +104,7 @@
     
 }
 #body center{
+    
     padding: 5vh 0px;
 }
 .STnav{
@@ -156,7 +157,7 @@
         height: 8vh;
         display: flex;
 
-        padding: 5px 10px;
+        padding: 4px 10px;
         flex:1;
         justify-content: center;
         transition: 0.25s;
@@ -173,7 +174,7 @@
     }
     
     li.allow:hover{
-        background: #2C3E50;
+        background: rgb(43, 71, 99);
         transition: 0.15s;
         *{
             transition: 0.15s;
@@ -204,15 +205,190 @@
     height:8vh;
     width:100%;
 }
+#b_b1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    img{
+        align-self: flex-start;
+        height: 50vh;
+        border: 2px solid rgba(10,2,10,0.2);
+        transition: 0.4s;
+    }
+    img:hover{
+        margin-top: -5vh;
+        height: 60vh;
+        border: 3px solid rgba(10,2,10,0.2);
+        border-bottom: 5px solid rgba(10,2,10,0.2);
+        transition: 0.2s;
+    }
+    div{
+        display:flex; 
+        justify-content: center;
+        width: 100%;
+        height:100%;
+        padding: 10vh 0;
+        p{
+            width: 50%;
+            padding: 2vh 5vw;
+            border-radius: 2px;
+        }
+        #left{
+            border-right:1px solid rgba(10,2,10,0.5);
+
+        }
+        #right{
+            border-left:1px solid rgba(10,2,10,0.5);
+
+        }
+
+        
+    }
+}
+#indexP{
+    background-image: url('https://images5.alphacoders.com/347/347085.jpg');
+
+}
+#indexTop{
+    background-image: url('https://images8.alphacoders.com/408/408382.jpg');
+}
+#indexCat{
+    background-image: url('https://images2.alphacoders.com/704/70432.jpg');
+}
+.parallax{
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0vh -2vw;
+    flex-wrap: wrap;
+    height: 100%;
+    transition: 0.8s;
+    #quizIn{
+        
+        display: flex;
+        justify-content: center;
+        padding: 10vh 5vw;
+        div{
+            border: 2px dotted rgba(25, 22, 184, 0.767);
+            background: rgba(101, 128, 247, 0.8);
+            padding: 4vh 13vw;
+            text-align: center;
+            *{
+                padding: 1vh 0vw;
+            }
+        }
+    }
+    
+}
+#indexP:hover{
+    transition: 0.3s;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    margin-top: -10vh;
+
+}
 .hideBar{
     display: none;
 }
 .showBar{
     display: block;
 }
+
+
 body{
+    overflow-x: hidden;
+
     background: #89C4F4;
     height: 100%;
+    #FFB{
+        padding: 6vh 15vw;
+        h1{
+            padding: 3vh 0vw;
+            background: rgba(34, 49, 63,0.8);
+            border: 2px solid black;
+            color: white;
+
+        }
+
+    }
+    #listFacts{
+        padding: 5vh 2vw;
+        li{
+            display: flex;
+            flex-wrap: column;
+            justify-content: center;
+            padding: 1vh 2vw;
+        }
+    }
+    #b_species{
+        width: 100%;
+        .column{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            .row{
+                display: flex;
+                flex:1;
+                width: 100%;
+                height: 100%;
+                justify-content: space-around;
+                margin-bottom: 5vh;
+                .cardSpecies{
+                    background: rgba(35, 132, 180, 0.8);
+                    border: 2px solid rgba(33, 211, 235, 0.5);
+                    width: 23%;
+                    height: 65vh;
+                    transition: 0.9s;
+                    *{
+                        background-position: 20%;
+                        background-attachment: initial;
+                        transition: 0.2s;
+                    }
+                    section{
+                        margin-top: -1.5vh;
+                        border: 2px solid rgba(33, 211, 235, 0.5);
+                    }
+                    #Thresher{
+                        background-image: url('http://ichef.bbci.co.uk/wwfeatures/wm/live/1600_640/images/live/p0/0x/01/p00x0154.jpg')
+                    }
+                    #Bask{
+                        background-image: url('https://sharkfactsforkids.weebly.com/uploads/1/8/6/9/18696762/9631459.jpg');
+                    }
+                    #Saw{
+                        background-image: url('https://sharksinthehumanage.files.wordpress.com/2017/06/81-pliotrema.jpg');
+                        
+                    }
+                    #hammer{
+                        background-image: url('https://www.hakaimagazine.com/wp-content/uploads/aaid_header.jpg');
+                        
+                    }
+                    #whaleS{
+                        background-image: url('https://c402277.ssl.cf1.rackcdn.com/photos/2099/images/hero_full/Whale-Shark-Homepage.jpg');
+                    }
+                    #titleSpecies{
+                        width:100%;
+                        height:25%;
+                        background:rgba(0,0,0,0.2);
+
+                        #titleBottom{
+                            padding: 2vh 0vw;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-start;
+                        }
+                    }
+                }
+                .cardSpecies:hover{
+                    background: rgba(30, 139, 195, 0.6);
+                    border: 4px solid rgba(66, 215, 235, 0.9);
+                    transition: 0.2s;
+                }
+            }  
+        }
+    }
     #list{
         list-style: square;
     }
@@ -220,6 +396,7 @@ body{
         display: flex;
         width: 75%;
         justify-content: center;
+        font-size: 1.25em;
     }
     #info{
         height: 100%;
@@ -232,6 +409,7 @@ body{
         
         }
         .cardInfo{
+            border: 2px solid rgba(63, 61, 192, 0.315);
             text-align: center;
             transition: 1s;
             margin: 5vh 0vw;

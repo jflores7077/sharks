@@ -77,10 +77,10 @@ function fixNav(a,b){
     var cuScroll = $(a).scrollTop();
     var nav = $('.NavSelected');
     var navTop = $('.NavSelected').offset().top
-    console.log(navTop)
+    
     var navHeight = $('.NavSelected').outerHeight(true)
     var placeholdBar = $('#navbarPlace');
-    console.log(cuScroll)
+    
     if(cuScroll >= b){
         $('.STnav').css('position','fixed');
         $('.STnav').css('width','100%');
@@ -92,7 +92,7 @@ function fixNav(a,b){
     if(cuScroll < b ){
         $('#body').css('margin-top','0vh')
         $('.STnav').css('position','relative')
-        console.log('s')
+        
         
     }
     
